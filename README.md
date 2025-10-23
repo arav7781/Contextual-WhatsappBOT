@@ -46,7 +46,7 @@ flowchart TD
     A[WhatsApp] --> B[Flask Webhook]
     B -->|Extract sender, message, media| C[(SQLite)]
     C -->|Get last N messages| D[Build messages list]
-    D -->|Add persona + context| E[Groq API (LLaMA-4-Scout)]
-    E -->|Generate contextual reply| F[(SQLite)]
+    D -->|Add persona + context| E[Groq API ]
+    E -->|Generate contextual reply| F[SQLite]
     F -->|Save assistant reply| G[Twilio Response]
     G -->|Send reply to user| A
