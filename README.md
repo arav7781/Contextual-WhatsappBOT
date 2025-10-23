@@ -43,7 +43,7 @@ The assistant operates on a webhook-driven architecture to manage the full conve
 
 ```mermaid
 flowchart TD
-    A[Twilio (WhatsApp)] --> B[Flask Webhook]
+    A[WhatsApp] --> B[Flask Webhook]
     B -->|Extract sender, message, media| C[(SQLite)]
     C -->|Get last N messages| D[Build messages list]
     D -->|Add persona + context| E[Groq API (LLaMA-4-Scout)]
